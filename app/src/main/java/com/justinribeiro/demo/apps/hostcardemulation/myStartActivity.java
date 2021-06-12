@@ -33,9 +33,12 @@ public class myStartActivity extends AppCompatActivity {
                //
                TextView getNdefString = (TextView) findViewById(R.id.ndef_text);
                String test = getNdefString.getText().toString();
+               TextView getNdefUuid = (TextView) findViewById(R.id.ndef_uuid);
+               String uuid = getNdefUuid.getText().toString();
 
                Intent intent = new Intent(view.getContext(), myHostApduService.class);
                intent.putExtra("ndefMessage", test);
+               intent.putExtra("ndefUuid", uuid);
                startService(intent);
            }
         }

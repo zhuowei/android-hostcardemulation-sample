@@ -41,16 +41,27 @@
             android:id="@+id/ndef_text"
             android:layout_below="@+id/description"
             android:layout_alignParentStart="true"
-            android:hint="Enter plain text for NDEF"
+            android:hint="Enter IPFS URL"
             android:autofillHints=""
-            android:inputType="text" />
+            android:inputType="text"
+            android:text="https://cloudflare-ipfs.com/ipfs/QmXtba1HNZYoeYivvBy2dVax8LMxBXSV5MNSkgmN2rAuPz"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ndef_uuid"
+            android:layout_below="@+id/ndef_text"
+            android:layout_alignParentStart="true"
+            android:hint="Enter UUID"
+            android:autofillHints=""
+            android:inputType="text"
+            android:text="c6601cfd-f4c0-4bca-8c19-d07da5cc6f58"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/set_ndef_button"
             android:id="@+id/set_ndef_button"
-            android:layout_below="@+id/ndef_text"
+            android:layout_below="@+id/ndef_uuid"
             android:layout_alignEnd="@+id/ndef_text" />
         </RelativeLayout>
 
